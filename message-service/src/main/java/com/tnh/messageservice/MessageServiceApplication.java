@@ -14,18 +14,18 @@ public class MessageServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(MessageServiceApplication.class, args);
     }
-    @Bean
-    public CommandLineRunner load() {
-        return new CommandLineRunner() {
-            @Override
-            public void run(String... args) throws Exception {
-                Message m = new FriendMessage.Builder()
-                        .fillContent("Hello")
-                        .setSendId("01")
-                        .setRecipientId("02")
-                        .build();
-                System.out.println(m.getContent());
-            }
-        };
-    }
+//    @Bean
+//    public CommandLineRunner load() {
+//        return new CommandLineRunner() {
+//            @Override
+//            public void run(String... args) throws Exception {
+//                Message m = new FriendMessage.Builder()
+//                        .fillContent("Hello")
+//                        .setSendId("01")
+//                        .setRecipientId("02")
+//                        .build();
+//                System.out.println(m.getContent());
+//            }
+//        };
+//    }
 }
