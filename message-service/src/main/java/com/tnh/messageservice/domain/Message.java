@@ -1,5 +1,8 @@
 package com.tnh.messageservice.domain;
 
+import lombok.Getter;
+
+@Getter
 public abstract class Message {
     private String content;
 
