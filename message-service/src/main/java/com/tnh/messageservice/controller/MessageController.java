@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono;
 
 @Slf4j
 @RestController
-@RequestMapping("/message-service")
+@RequestMapping("/messages")
 public class MessageController {
     @GetMapping("/demo")
     public Mono<Message> demo() {
