@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      name: commons, message-service
+      name: cloud-gateway
       uri: http://localhost:8071
   application:
-    name: message-service
+    name: cloud-gateway
