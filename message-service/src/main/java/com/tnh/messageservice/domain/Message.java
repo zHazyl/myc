@@ -5,11 +5,17 @@ import lombok.Getter;
 @Getter
 public abstract class Message {
     private String content;
+    private String type;
 
     public static abstract class Builder<T extends Builder<T>> {
         String content = "";
-        public T fillContent(String content) {
+        String type = "";
+        public T setContent(String content) {
             this.content = content;
+            return self();
+        }
+        public T setType(String type) {
+            this.type = type;
             return self();
         }
         public abstract Message build();
@@ -18,6 +24,6 @@ public abstract class Message {
 
     Message(Builder<?> builder) {
         content = builder.content;
+        type = builder.type;
     }
-
 }
