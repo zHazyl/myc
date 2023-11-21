@@ -7,5 +7,6 @@ eureka:
     fetch-registry: false
   server:
     enable-self-preservation: false
+    waitTimeInMsWhenSyncEmpty: 5
 server:
   port: 8761
