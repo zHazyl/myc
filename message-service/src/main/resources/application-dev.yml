@@ -13,4 +13,5 @@ eureka:
       enabled: true
 spring:
   data:
-    mongodb: mongodb://localhost:27017/message_service_database
+    mongodb: mongodb://localhost:27017
+    database: test

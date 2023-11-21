@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+import java.util.UUID;
+
 @Service
 @RequiredArgsConstructor
 public class MessageServiceImpl implements MessageService {
@@ -15,6 +17,7 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public Mono<MessageDocument> saveMessage(Message message) {
-        return messageRepository.save(new MessageDocument("1", message.getContent(), message.getType()));
+        UUID id = UUID.randomUUID();
+        return messageRepository.save(new MessageDocument(id.toString(), message.getContent(), message.getType()));
     }
 }
