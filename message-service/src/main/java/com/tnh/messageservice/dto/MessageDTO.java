@@ -4,6 +4,7 @@ public record MessageDTO(
         String content,
         String type,
         String recipient,
-        String sender
+        String sender,
+        String emoji
 ) {
 }

@@ -3,4 +3,5 @@ include 'config-server'
 include 'discovery-server'
 include 'message-service'
 include 'cloud-gateway'
+include 'auth-service'
 

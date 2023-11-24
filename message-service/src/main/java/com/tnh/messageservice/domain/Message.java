@@ -1,11 +1,13 @@
 package com.tnh.messageservice.domain;
 
+import com.tnh.messageservice.domain.emoji.Emoji;
 import lombok.Getter;
 
 @Getter
 public abstract class Message {
     private String content;
     private String type;
+    private String emoji;
 
     public static abstract class Builder<T extends Builder<T>> {
         String content = "";
