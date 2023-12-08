@@ -13,3 +13,17 @@ eureka:
       defaultZone: http://localhost:8761/eureka
     healthcheck:
       enabled: true
+spring:
+  datasource:
+    url: jdbc:sqlserver://TNHANH1:1433;database=myc;encrypt=true;trustServerCertificate=true;loginTimeout=30;
+    username: 'sa'
+    password: '@Tnh210302h'
+#    schema: classpath:sql/user-table.sql
+#    data: classpath:sql/ser-data.sql
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+  sql:
+    init:
+      mode: always
