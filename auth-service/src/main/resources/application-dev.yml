@@ -1,0 +1,44 @@
+server:
+  port: 8989
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-${random.int}
+    prefer-ip-address: false
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+spring:
+  datasource:
+    url: jdbc:sqlserver://TNHANH1:1433;database=myc;encrypt=true;trustServerCertificate=true;loginTimeout=30;
+    username: 'sa'
+    password: '@Tnh210302h'
+#    schema: classpath:sql/user-table.sql
+#    data: classpath:sql/ser-data.sql
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+  sql:
+    init:
+      mode: always
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: login-app
+            authorization-grant-type: authorization_code
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/SpringBootKeycloak
+            user-name-attribute: preferred_username
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/SpringBootKeycloak

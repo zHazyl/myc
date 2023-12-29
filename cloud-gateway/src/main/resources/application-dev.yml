@@ -12,6 +12,12 @@ spring:
             - Path=/message-service/**
           filters:
             - RewritePath=/message-service/(?<path>.*), /$\{path}
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth-service/**
+          filters:
+            - RewritePath=/auth-service/(?<path>.*), /$\{path}
 server:
   port: 8080
 eureka:

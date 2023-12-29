@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: commons, auth-service
+      uri: http://localhost:8071
+  application:
+    name: auth-service
