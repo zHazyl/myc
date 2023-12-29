@@ -8,3 +8,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
 }
+
+docker {
+    name "zhazy/${project.name}:${project.version}"
+    files "$buildDir/libs/${project.name}-${project.version}.jar"
+    buildArgs([JAR_FILE: "${project.name}-${project.version}.jar"])
+}
