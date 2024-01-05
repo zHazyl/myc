@@ -6,3 +6,5 @@ include 'cloud-gateway'
 include 'auth-service'
 //include 'auth-tutorial'
 //include 'bean-post-processor-train'
+include 'websocket-service'
+
