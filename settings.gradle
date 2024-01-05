@@ -4,4 +4,5 @@ include 'discovery-server'
 include 'message-service'
 include 'cloud-gateway'
 include 'auth-service'
-
+//include 'auth-tutorial'
+//include 'bean-post-processor-train'
